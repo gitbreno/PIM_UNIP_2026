@@ -7,7 +7,7 @@
   <title>FitLife - Painel</title>
 
   <!-- Arquivo de estilos -->
-  <link rel="stylesheet" href="/CSS/style_inicial.css" />
+  <link rel="stylesheet" href="CSS/style_inicial.css" />
 </head>
 <body>
 
@@ -21,8 +21,8 @@
     </div>
 
     <!-- Links de navegação -->
-<nav>
-      <a href="emdesenvolvimento.html" class="menu-item ativo">🏠 Painel</a>
+    <nav>
+      <a href="#" class="menu-item ativo">🏠 Painel</a>
       <a href="emdesenvolvimento.html" class="menu-item">🏋️ Meus Treinos</a>
       <a href="emdesenvolvimento.html" class="menu-item">🥗 Alimentação</a>
       <a href="emdesenvolvimento.html" class="menu-item">📈 Evolução</a>
@@ -30,7 +30,6 @@
       <a href="emdesenvolvimento.html" class="menu-item">📅 Calendário</a>
       <a href="emdesenvolvimento.html" class="menu-item">👤 Perfil</a>
     </nav>
-
 
   </div>
 
@@ -64,20 +63,18 @@
           </div>
         </div>
 
-        <!-- Atividades da semana — cada ícone leva para emdesenvolvimento.html -->
+        <!-- Atividades da semana -->
         <div class="atividades">
-          <div href="#" class="atividade" title="Musculação">🏋️</div>
-          <div href="#" class="atividade" title="Corrida">👟</div>
-          <div href="#" class="atividade" title="Alimentação">🥗</div>
-          <div href="#" class="atividade" title="Cardio">❤️</div>
+          <a href="emdesenvolvimento.html" class="atividade" title="Musculação">🏋️</a>
+          <a href="emdesenvolvimento.html" class="atividade" title="Corrida">👟</a>
+          <a href="emdesenvolvimento.html" class="atividade" title="Alimentação">🥗</a>
+          <a href="emdesenvolvimento.html" class="atividade" title="Cardio">❤️</a>
         </div>
       </div>
 
       <!-- Card 2: Evolução de peso -->
       <div class="card">
         <h2 class="card-titulo">Evolução de Peso <small>(últimos 30 dias)</small></h2>
-
-        <!-- Gráfico de linha simples com Canvas -->
         <canvas id="graficoPeso" width="300" height="130"></canvas>
       </div>
 
@@ -85,8 +82,6 @@
       <div class="card">
         <h2 class="card-titulo">Treinos por Semana</h2>
         <p class="card-info">Semana atual: <strong>7/10</strong></p>
-
-        <!-- Gráfico de barras simples com Canvas -->
         <canvas id="graficoTreinos" width="300" height="130"></canvas>
       </div>
 
@@ -105,15 +100,12 @@
             <button class="btn-nav" onclick="mudarMes(1)">›</button>
           </div>
         </div>
-
-        <!-- Grade do calendário gerada pelo JavaScript -->
         <div class="calendario-grade" id="calendarioGrade"></div>
       </div>
 
       <!-- Card 5: Conquistas -->
       <div class="card">
         <h2 class="card-titulo">🏆 Histórico de Conquistas</h2>
-
         <div class="conquistas-grade" id="conquistasGrade"></div>
       </div>
 
@@ -121,8 +113,15 @@
 
   </div>
 
+  <!-- BOTÃO DE ACESSIBILIDADE (fixo no canto inferior direito) -->
+  <div class="acessibilidade">
+    <span class="acess-label">Fonte</span>
+    <button onclick="aumentarFonte()" title="Aumentar fonte">A+</button>
+    <button onclick="diminuirFonte()" title="Diminuir fonte">A-</button>
+  </div>
+
   <!-- Arquivo de scripts -->
-  <script src="/JS/script.js"></script>
+  <script src="JS/script.js"></script>
 
 </body>
 </html>

@@ -12,7 +12,6 @@ for(var i = 0; i < itensMenu.length; i++){
 
 function selecionarMenu(event){
 
-
     for(var i = 0; i < itensMenu.length; i++){
 
         itensMenu[i].classList.remove("ativo");
@@ -302,5 +301,42 @@ for(var i = 0; i < conquistas.length; i++){
         "</span>";
 
     areaConquistas.appendChild(badge);
+
+}
+
+
+
+/* ==========================
+   ACESSIBILIDADE — FONTE
+========================== */
+
+/* Tamanho inicial da fonte em px */
+var tamanhoFonte = 14;
+
+function aumentarFonte(){
+
+    /* Limite máximo: 20px */
+    if(tamanhoFonte < 20){
+
+        tamanhoFonte = tamanhoFonte + 2;
+
+        /* Atualiza a variável CSS --fonte que controla tudo */
+        document.documentElement.style.setProperty("--fonte", tamanhoFonte + "px");
+
+    }
+
+}
+
+function diminuirFonte(){
+
+    /* Limite mínimo: 10px */
+    if(tamanhoFonte > 10){
+
+        tamanhoFonte = tamanhoFonte - 2;
+
+        /* Atualiza a variável CSS --fonte que controla tudo */
+        document.documentElement.style.setProperty("--fonte", tamanhoFonte + "px");
+
+    }
 
 }
