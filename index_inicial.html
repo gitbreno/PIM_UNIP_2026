@@ -1,0 +1,127 @@
+<!-- Estrutura básica DOCTYPE HTML-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife - Painel</title>
+
+  <!-- Arquivo de estilos -->
+  <link rel="stylesheet" href="/CSS/style_inicial.css" />
+</head>
+<body>
+
+  <!-- MENU LATERAL (SIDEBAR) -->
+  <div class="sidebar">
+
+    <!-- Logo -->
+    <div class="logo">
+      <span class="logo-icon">💪</span>
+      <span class="logo-nome">FitLife</span>
+    </div>
+
+    <!-- Links de navegação -->
+    <nav>
+      <a href="#" class="menu-item ativo">🏠 Painel</a>
+      <a href="#" class="menu-item">🏋️ Meus Treinos</a>
+      <a href="#" class="menu-item">🥗 Alimentação</a>
+      <a href="#" class="menu-item">📈 Evolução</a>
+      <a href="#" class="menu-item">🎯 Metas</a>
+      <a href="#" class="menu-item">📅 Calendário</a>
+      <a href="#" class="menu-item">👤 Perfil</a>
+    </nav>
+
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="conteudo">
+
+    <!-- Cabeçalho da página -->
+    <div class="cabecalho">
+      <div>
+        <h1>Olá, Aluno! 👋</h1>
+        <p>Bem-vindo de volta à sua jornada saudável.</p>
+      </div>
+      <div class="cabecalho-direita">
+        <button class="btn-periodo" onclick="alterarPeriodo()">📅 Semana ▾</button>
+        <button class="btn-sino" onclick="alterarSino()" id="btnSino">🔔</button>
+        <div class="avatar">R</div>
+      </div>
+    </div>
+
+    <!--  LINHA 1 — 3 CARDS NO TOPO -->
+    <div class="linha-topo">
+
+      <!-- Card 1: Progresso da semana -->
+      <div class="card">
+        <h2 class="card-titulo">Progresso da Semana</h2>
+
+        <!-- Anel de progresso feito com CSS -->
+        <div class="anel-container">
+          <div class="anel" id="anel">
+            <span class="anel-texto" id="anelTexto">0%</span>
+          </div>
+        </div>
+
+        <!-- Atividades da semana -->
+        <div class="atividades">
+          <span class="atividade" title="Musculação">🏋️</span>
+          <span class="atividade" title="Corrida">👟</span>
+          <span class="atividade" title="Alimentação">🥗</span>
+          <span class="atividade" title="Cardio">❤️</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Evolução de peso -->
+      <div class="card">
+        <h2 class="card-titulo">Evolução de Peso <small>(últimos 30 dias)</small></h2>
+
+        <!-- Gráfico de linha simples com Canvas -->
+        <canvas id="graficoPeso" width="300" height="130"></canvas>
+      </div>
+
+      <!-- Card 3: Treinos por semana -->
+      <div class="card">
+        <h2 class="card-titulo">Treinos por Semana</h2>
+        <p class="card-info">Semana atual: <strong>7/10</strong></p>
+
+        <!-- Gráfico de barras simples com Canvas -->
+        <canvas id="graficoTreinos" width="300" height="130"></canvas>
+      </div>
+
+    </div><!-- fim linha-topo -->
+
+    <!-- LINHA 2 — 2 CARDS EMBAIXO -->
+    <div class="linha-baixo">
+
+      <!-- Card 4: Calendário de treinos -->
+      <div class="card">
+        <div class="calendario-cabecalho">
+          <h2 class="card-titulo">📅 Calendário de Treinos</h2>
+          <div>
+            <button class="btn-nav" onclick="mudarMes(-1)">‹</button>
+            <span id="mesTitulo"></span>
+            <button class="btn-nav" onclick="mudarMes(1)">›</button>
+          </div>
+        </div>
+
+        <!-- Grade do calendário gerada pelo JavaScript -->
+        <div class="calendario-grade" id="calendarioGrade"></div>
+      </div>
+
+      <!-- Card 5: Conquistas -->
+      <div class="card">
+        <h2 class="card-titulo">🏆 Histórico de Conquistas</h2>
+
+        <div class="conquistas-grade" id="conquistasGrade"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Arquivo de scripts -->
+  <script src="/JS/script.js"></script>
+
+</body>
+</html>
