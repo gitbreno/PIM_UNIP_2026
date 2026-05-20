@@ -12,7 +12,6 @@ for(var i = 0; i < itensMenu.length; i++){
 
 function selecionarMenu(event){
 
-    event.preventDefault();
 
     for(var i = 0; i < itensMenu.length; i++){
 
